@@ -1,0 +1,503 @@
+/*----------------------------------------------
+PRODUCTS STYLESHEET 
+
+made by André Kasper Kolstad 40210335
+------------------------------------------------*/
+
+
+*{
+  font-family:Montserrat;
+}
+
+
+/*NAVIGATION BAR
+--------------------------------*/
+.logo {
+  height:50px;
+  width:120px;
+  margin:0;
+  margin-left:10px;
+  padding:0;
+  float:left;
+}
+
+.navbar {
+  position: relative;
+  display:flex;
+  align-items:center;
+  background-color:#654CD6;
+  padding-top:0rem;
+  padding-bottom:0rem;
+  padding-left:1rem;
+  padding-right:1rem;
+  margin:0;
+}
+
+.navbar-nav {
+  justify-content: flex-end;
+  font-size:18px;
+  align-items:center;
+  color:white;
+  padding-top:0;
+}
+
+.navbar-nav .nav-link {
+  color:white;
+}
+
+.navbar-toggler {
+  border-color:white;
+  cursor:pointer;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.nav-item {
+  padding-right:10px;
+  padding-left:10px;
+}
+
+.nav-link {
+  color:white;
+  height:60px;
+  display:flex;
+  align-items:center;
+}
+
+.navbar-nav a:hover, .dropdown:hover {
+  background-color: rgb(80,55,100);
+}
+
+.active {
+  color:#FFD854;
+  font-weight:bolder;
+}
+
+#login-button {
+  font-weight:bolder;
+}
+
+
+/*DROPDOWN NAV MENU "AISLES"
+----------------------------------*/
+.dropdown {
+  overflow:visible;
+}
+
+.dropdown .dropbtn {
+  border: none;
+  outline: none;
+  color: white;
+  height:60px;
+  background-color: inherit;
+  font-weight:normal;
+  margin: 0;
+  white-space:nowrap;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(60,35,80);
+  min-width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+  z-index: 3;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #FFD854;
+  color:black;
+}
+
+.arrow {
+  display: inline;
+  font-size:10px;
+  margin-left:7px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/*SEARCH BAR SECTION
+------------------------------*/
+#searchbar_section {
+  width:100%;
+  overflow:hidden;
+  background-color: #8578FA;
+  height:50px;
+
+  /*Centering search bar both vertically and horizontally*/
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  /*Making the search bar stay at top of screen while scrolling*/
+  position:sticky;    /* Makes it stick*/
+  z-index: 2;         /* Makes it stay on top of other divs, except dropdown*/
+  top: -1px;          /* Sticking to the top */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+}
+
+.searchbar {
+  background-color:#9289FA;
+  border:none;
+  color: black;
+  height:28px;
+  padding-left:10px;
+  padding-right:10px;
+  width:70%;
+  text-align:center;
+  font-size: 15px;
+  font-weight:bolder;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+}
+
+/*Placeholder text for the search bar*/
+::placeholder {
+  color:white;
+  font-weight:normal;
+  opacity:80%;
+}
+
+
+/*PRODUCT SECTION
+----------------------------------*/
+.product-box{
+  background-color:#FFD854;
+}
+
+.product-image{
+  height:50vh;
+  width:50vh;
+  border-radius:25vh;
+  object-fit: cover;
+}
+
+.product-info{
+  display:block;
+  text-align: center;
+  float:right;
+  margin-right:0;
+  margin-left:5vw;
+}
+
+.product-title{
+  font-weight:bolder;
+  color:#654CD6;
+  padding:0;
+  margin-bottom:0;
+}
+
+.product-quantity{
+  color:#DB946C;
+}
+
+.product-image-box{
+  height:100%;
+  width:50vh;
+  margin-right:8vw;
+  margin-left:10vw;
+  margin-bottom:5vh;
+}
+
+.img-bg{
+  width:70%;
+  height:120%;
+  padding:24vh;
+  margin:-24vh;
+  background-position:center;
+  background-size:cover;
+  border-radius:50%;
+}
+
+/*Background images for each product*/
+.apple-img{
+  background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url("../images/apple.jpeg");
+}
+
+.broccoli-img{
+  background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url("../images/broccoli.jpg");
+}
+
+.brie-img{
+  background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../images/brie_cheese.jpg");
+}
+
+.eggs-img{
+  background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../images/eggs-product.jpg");
+}
+
+.watermelon-img{
+  background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../images/watermelon.jpg");
+}
+
+.sangria-img{
+  background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../images/sangria.jpg");
+}
+
+.potato-img{
+  background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../images/potato.jpg");
+}
+
+.pork-chops-img{
+  background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../images/pork-chops.jpg");
+}
+
+.steak-img{
+  background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../images/steak.jpg");
+}
+
+.cookies-img{
+  background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../images/cookies.jpg");
+}
+
+.candy-img{
+  background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../images/candy.jpg");
+}
+
+.chocolate-img{
+  background-image:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../images/chocolate.jpg");
+}
+
+.new-box{
+  width:100%;
+  padding-top:15vh;
+  padding-bottom:10vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap;
+}
+
+.reset-box{
+  width:98.22vw;
+}
+
+.card-body{
+  padding:0.8rem;
+  align-items:flex-start;
+  word-wrap:break-word;
+  width:34vw;
+}
+
+.btn-primary.btn-descr {
+  margin-top:3vh;
+  margin-bottom:3vh;
+  background-color:#fee591;
+  color:#9289FA;
+}
+
+.btn-primary.btn-descr:hover{
+  background-color:#9289FA;
+  color:#fff;
+}
+
+.description-btn{
+  display:block;
+  text-align:center;
+}
+
+.price-display{
+  color:rgb(60,35,80);
+}
+
+.price{
+  color:#654CD6;
+  font-size:26px;
+}
+
+.old-price{
+  color:red;
+  text-decoration: line-through;
+  padding-left:1vw;
+}
+
+.btn-primary {
+  color:rgb(60,35,80);
+  background-color:#DB946C;
+  border:none;
+}
+
+.btn-primary:hover{
+  background-color:rgb(60,35,80);
+  color:#D8946C;
+}
+
+/*Quantity box*/
+.quantity {
+ display: inline-block;
+}
+
+.quantity .input-text.qty {
+ width: 3.5vw;
+ height:41px;
+ padding: 0 5px;
+ text-align: center;
+ background-color: #fee591;
+ border: none;
+ color:rgb(60,25,80);
+}
+
+.quantity.buttons_added {
+ text-align: left;
+ position: relative;
+ white-space: nowrap;
+ vertical-align: top;
+ margin-bottom:2vh;
+}
+
+.quantity.buttons_added input {
+ display: inline-block;
+ margin: 0;
+ vertical-align: top;
+ box-shadow: none;
+}
+
+.quantity.buttons_added .minus,
+.quantity.buttons_added .plus {
+ padding: 7px 10px 8px;
+ height: 41px;
+ border: none;
+ cursor:pointer;}
+
+
+.quantity.buttons_added .minus {
+ border-top-left-radius: 2vh;
+ border-bottom-left-radius: 2vh;
+ color:white;
+ background-color:#9289FA;
+}
+
+.quantity.buttons_added .plus {
+  border-top-right-radius: 2vh;
+  border-bottom-right-radius: 2vh;
+  color:white;
+  background-color:#9289FA;
+}
+
+.quantity.buttons_added .minus:hover,
+.quantity.buttons_added .plus:hover {
+ background: rgb(60,35,80);
+ color:yellow;
+}
+
+.quantity input::-webkit-outer-spin-button,
+.quantity input::-webkit-inner-spin-button {
+ -webkit-appearance: none;
+ -moz-appearance: none;
+ margin: 0;
+}
+
+ .quantity.buttons_added .minus:focus,
+.quantity.buttons_added .plus:focus {
+ outline: none;
+}
+
+/*frequently bought section*/
+.freq-bought{
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #f4b8de;
+width:100%;
+}
+
+.row{
+  margin:0;
+}
+
+.freq-title-box{
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+  position:relative;
+  z-index: 1;
+}
+
+.freq-title{
+font-size: 20px;
+color: white;
+padding-bottom: 3vh;
+padding-top:3vh;
+background-color: #d982b5;
+text-align:center;
+}
+
+.card{
+margin-top: 20px;
+margin-left: 2vw !important;
+margin-right: 2vw !important;
+background-color:#fee591;
+color:#DB946C;
+border:none;
+font-size:15px;
+display:block;
+text-align:center;
+}
+
+.card.description{
+  text-align:left;
+}
+
+.card-body.freq_pr{
+  width:100%;
+}
+
+.card-image{
+max-height: 30%;
+}
+
+.card-img-top{
+object-fit:cover;
+height: 30vh;
+}
+
+
+/*FOOTER SECTION
+--------------------------------*/
+.bg-custom-footer {
+background-color:#8578FA;
+color:#FFD854;
+}
+
+.row.py-4{
+  align-items: flex-start;
+}
+
+.fa, .py-2 {
+  color:#FFD854;
+}
+
+.py-5{
+  padding-bottom:0 !important;
+  padding-top:30px !important;
+}
+
+.first-col{
+  align-self: center;
+}
+
+.input-group ::placeholder{
+  color:rgb(60,35,85);
+}
+
+.bg-custom-copyright{
+  background-color:#7E6DD5;
+  padding-bottom:0 !important;
+  padding-top:0 !important;
+}
